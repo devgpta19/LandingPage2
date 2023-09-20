@@ -1,0 +1,154 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+html{
+    perspective: 100px;
+}
+
+#main {
+    height: 100%;
+    width: 100%;
+    background-color: whitesmoke;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#main img {
+    height: 40vw;
+    perspective: -1200px;
+    transform-style: preserve-3d;
+    z-index: 99;
+    object-fit: cover;
+}
+
+#scrolldiv1 {
+    position: absolute;
+    width: 100%;
+    top: 25%;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+#scrolldiv1 h1 {
+    display: inline-block;
+    font-size: 7vw;
+    font-family: 'monument';
+    text-transform: uppercase;
+    margin-right: 1.5vw;
+    animation-name: scroll;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+
+#scrolldiv1::-webkit-scrollbar{
+    display: none;
+}
+
+#scrolldiv2 {
+    position: absolute;
+    top: 43%;
+    width: 100%;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-text-stroke-width: 0.17vw;
+    -webkit-text-stroke-color: #000;
+    color: transparent;
+    z-index: 100;
+}
+
+#scrolldiv2 h1 {
+    display: inline-block;
+    font-size: 7vw;
+    font-family: 'monument';
+    text-transform: uppercase;
+    margin-right: 1.5vw;
+    animation-name: scroll;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+
+#scrolldiv2::-webkit-scrollbar{
+    display: none;
+}
+
+
+#scrolldiv3 {
+    position: absolute;
+    top: 60%;
+    width: 100%;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+#scrolldiv3 h1 {
+    display: inline-block;
+    font-size: 7vw;
+    font-family: 'monument';
+    text-transform: uppercase;
+    margin-right: 1.5vw;
+    animation-name: scroll;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: reverse;
+}
+
+
+#scrolldiv3::-webkit-scrollbar{
+    display: none;
+}
+
+#text{
+    text-transform: uppercase;
+    position: absolute;
+    z-index: 105;
+    top: 16%;
+    font-size: 1.5vw;
+    font-family: 'monument';
+    text-align: center;
+    letter-spacing: 0.08vw;
+    width: 50%;
+    color: #000;
+}
+
+@keyframes scroll {
+    0%{
+        transform: translate(calc(-100% - 1.8vw));
+    }
+    100%{
+        transform: translate(0%);
+    }
+    
+}
+
+#cursor{
+    position: absolute;
+    z-index: 9999;
+    perspective: 100000px;
+    width: 5vh;
+    height: 5vh;
+    background-color: rgba(227, 255, 254, 0.427);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 50%;
+    pointer-events: none;
+    box-shadow: 0 0 0.7vh #000000;
+}
