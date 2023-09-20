@@ -21,6 +21,7 @@ html{
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: none;
 }
 
 #main img {
@@ -29,6 +30,16 @@ html{
     transform-style: preserve-3d;
     z-index: 99;
     object-fit: cover;
+}
+
+#imgdiv{
+    position: absolute;
+    height: 40vw;
+    width: 26.8vw;
+    perspective: -1200px;
+    transform-style: preserve-3d;
+    z-index: 133;
+    /* background-color: rgba(255, 255, 0, 0.211); */
 }
 
 #scrolldiv1 {
@@ -59,7 +70,7 @@ html{
 
 #scrolldiv2 {
     position: absolute;
-    top: 43%;
+    top: 45%;
     width: 100%;
     white-space: nowrap;
     overflow-x: auto;
@@ -90,7 +101,7 @@ html{
 
 #scrolldiv3 {
     position: absolute;
-    top: 60%;
+    top: 65%;
     width: 100%;
     white-space: nowrap;
     overflow-x: auto;
@@ -142,9 +153,8 @@ html{
     position: absolute;
     z-index: 9999;
     perspective: 100000px;
-    width: 5vh;
-    height: 5vh;
-    background-color: rgba(227, 255, 254, 0.427);
+    width: 3vh;
+    height: 3vh;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
