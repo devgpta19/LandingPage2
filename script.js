@@ -1,6 +1,29 @@
 const img = document.querySelector("#main img");
 const cursor = document.querySelector("#cursor");
-const imgdiv = document.querySelector("#imgdiv")
+const imgdiv = document.querySelector("#imgdiv");
+
+
+document.querySelector("#one").addEventListener("mouseover",function(dets){
+    cursor.style.backgroundColor = "rgba(0, 255, 255, 0.522)";
+    cursor.style.mixBlendMode = "normal";
+})
+
+document.querySelector("#one").addEventListener("mouseleave",function(dets){
+    cursor.style.backgroundColor = "whitesmoke";
+    cursor.style.mixBlendMode = "difference";
+})
+
+
+document.querySelector("#three").addEventListener("mouseover",function(dets){
+    cursor.style.backgroundColor = "rgba(0, 255, 255, 0.522)";
+    cursor.style.mixBlendMode = "normal";
+})
+
+document.querySelector("#three").addEventListener("mouseleave",function(dets){
+    cursor.style.backgroundColor = "whitesmoke";
+    cursor.style.mixBlendMode = "difference";
+})
+
 
 imgdiv.addEventListener("mousemove", function(dets){
     const rotx = 55 - dets.x/11;

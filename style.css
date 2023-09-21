@@ -2,6 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    /* cursor: none; */
 }
 
 html,
@@ -14,18 +15,74 @@ html{
     perspective: 100px;
 }
 
-#main {
+#full{
     height: 100%;
+    width: 100%;
+    background-color: rgb(174, 12, 12);
+}
+
+#nav{
+    height: 10%;
+    width: 100%;
+    background-color: whitesmoke;
+    display: flex;
+    padding: 1vh 1vw;
+    font-family: 'monument';
+    gap: 17vw;
+}
+
+a{
+    width: 100%;
+    text-decoration: none;
+}
+
+h3{
+    font-size: 1.2vw;
+    text-decoration: none;
+    letter-spacing: 0.3vw;
+    font-weight: 100;
+    text-transform: uppercase;
+}
+
+#one{
+    width: 100%;
+    align-items: left;
+    color: #000;
+}
+
+#two{
+    width: 100%;
+    text-align: center;
+    background-image: url(https://images.unsplash.com/photo-1496440737103-cd596325d314?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80);
+    background-position: center;
+    background-size: cover;
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+
+}
+
+#three{
+    width: 47%;
+    color: #000;
+    text-align: right;
+    margin-left: 9vw;
+
+}
+
+#main {
+    height: 90%;
     width: 100%;
     background-color: whitesmoke;
     display: flex;
     align-items: center;
     justify-content: center;
-    cursor: none;
 }
 
 #main img {
-    height: 40vw;
+    margin-bottom: 6%;
+    height: 35vw;
+    width: 24vw;
     perspective: -1200px;
     transform-style: preserve-3d;
     z-index: 99;
@@ -34,8 +91,9 @@ html{
 
 #imgdiv{
     position: absolute;
-    height: 40vw;
-    width: 26.8vw;
+    margin-bottom: 6%;
+    height: 35vw;
+    width: 24vw;
     perspective: -1200px;
     transform-style: preserve-3d;
     z-index: 133;
@@ -161,4 +219,90 @@ html{
     border-radius: 50%;
     pointer-events: none;
     box-shadow: 0 0 0.7vh #000000;
+}
+
+#last2text{
+    font-size: 1.2vw;
+    font-family: 'monument';
+    font-weight: 200;
+    color: #000;
+    position: absolute;
+    top: 80%;
+    left: 1%;
+    text-transform:uppercase;
+}
+
+#lasttext{
+    font-size: 0.8vw;
+    letter-spacing: 0.3vw;
+    font-family: 'monument';
+    font-weight: 200;
+    color: #6a6a6a;
+    position: absolute;
+    top: 98%;
+    left: 1%;
+    text-transform:uppercase;
+}
+
+#name{
+    font-size: 0.8vw;
+    letter-spacing: 0.3vw;
+    font-family: 'monument';
+    font-weight: 200;
+    color: #6a6a6a;
+    position: absolute;
+    top: 95%;
+    right: 1%;
+    text-transform:uppercase;
+}
+
+#name::after{
+    content: "";
+    width: 100%;
+    height: 0.3vw;
+    background-color: #6a6a6a;
+    position: absolute;
+    top: -50%;
+    right: 0;
+
+    animation-name: line;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+    animation-play-state: running;
+    animation-direction: alternate-reverse;
+}
+
+#name::before{
+    content: "";
+    width: 100%;
+    height: 0.3vw;
+    background-color: #6a6a6a;
+    position: absolute;
+    bottom: -50%;
+    right: 0;
+
+    animation-name: line;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+    animation-play-state: running;
+    animation-direction: alternate;
+}
+
+@keyframes line {
+    0%{
+        left: 0;
+        width: 0;
+    }
+    50%{
+        left: 0;
+        width: 100%;
+    }
+    100%{
+        left: 100%;
+        width: 0%;
+    }
 }
